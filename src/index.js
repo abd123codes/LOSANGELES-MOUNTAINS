@@ -5,7 +5,6 @@ const accDisplayButton3 = document.querySelector("#accBtn3");
 const accDisplayButton4 = document.querySelector("#accBtn4");
 const accDisplayButton5 = document.querySelector("#accBtn5");
 const accDisplayButton6 = document.querySelector("#accBtn6");
-
 const accList1 = document.querySelector("#accList1");
 const accList2 = document.querySelector("#accList2");
 const accList3 = document.querySelector("#accList3");
@@ -56,37 +55,68 @@ const carousel1 = document.getElementById("carousel1");
 const carousel2 = document.getElementById("carousel2");
 const carousel3 = document.getElementById("carousel3");
 
-const leftBtn = document.getElementById("left-btn");
-const rightBtn = document.getElementById("right-btn");
+const nav1 = document.getElementById("nav1");
+const nav2 = document.getElementById("nav2");
+const nav3 = document.getElementById("nav3");
 
 carousel1.style.display = "flex";
-leftBtn.style.display = "none";
-rightBtn.style.display = "flex";
+carousel2.style.display = "none";
+carousel3.style.display = "none";
 
-leftBtn.addEventListener("click", function carouselBtnHandler1() {
-  if (carousel3.style.display === "flex") {
-    leftBtn.style.display = "flex";
-    rightBtn.style.display = "flex";
-    carousel2.style.display = "flex";
-    carousel3.style.display = "none";
-  } else if (carousel2.style.display === "flex") {
-    leftBtn.style.display = "none";
-    carousel2.style.display = "none";
-    carousel1.style.display = "flex";
-    rightBtn.style.display = "flex";
-  }
-});
-
-rightBtn.addEventListener("click", function carouselBtnHandler2() {
+nav1.addEventListener("click", function navHandler1() {
   if (carousel1.style.display === "flex") {
-    leftBtn.style.display = "flex";
-    rightBtn.style.display = "flex";
     carousel1.style.display = "none";
     carousel2.style.display = "flex";
-  } else if (carousel2.style.display === "flex") {
-    leftBtn.style.display = "flex";
-    carousel2.style.display = "none";
-    carousel3.style.display = "flex";
-    rightBtn.style.display = "none";
+    carousel3.style.display = "none";
   }
 });
+nav2.addEventListener("click", function navHandler2() {
+  if (carousel2.style.display === "flex") {
+    carousel1.style.display = "none";
+    carousel2.style.display = "none";
+    carousel3.style.display = "flex";
+  }
+});
+nav3.addEventListener("click", function navHandler3() {
+  if (carousel3.style.display === "flex") {
+    carousel1.style.display = "flex";
+    carousel2.style.display = "none";
+    carousel3.style.display = "none";
+  }
+});
+
+//  BETTER FOR UI, clear indication on what to click to navigate
+// const leftBtn = document.getElementById("left-btn");
+// const rightBtn = document.getElementById("right-btn");
+
+// carousel1.style.display = "flex";
+// leftBtn.style.display = "none";
+// rightBtn.style.display = "flex";
+
+// leftBtn.addEventListener("click", function carouselBtnHandler1() {
+//   if (carousel3.style.display === "flex") {
+//     leftBtn.style.display = "flex";
+//     rightBtn.style.display = "flex";
+//     carousel2.style.display = "flex";
+//     carousel3.style.display = "none";
+//   } else if (carousel2.style.display === "flex") {
+//     leftBtn.style.display = "none";
+//     carousel2.style.display = "none";
+//     carousel1.style.display = "flex";
+//     rightBtn.style.display = "flex";
+//   }
+// });
+
+// rightBtn.addEventListener("click", function carouselBtnHandler2() {
+//   if (carousel1.style.display === "flex") {
+//     leftBtn.style.display = "flex";
+//     rightBtn.style.display = "flex";
+//     carousel1.style.display = "none";
+//     carousel2.style.display = "flex";
+//   } else if (carousel2.style.display === "flex") {
+//     leftBtn.style.display = "flex";
+//     carousel2.style.display = "none";
+//     carousel3.style.display = "flex";
+//     rightBtn.style.display = "none";
+//   }
+// });
