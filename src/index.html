@@ -10,33 +10,49 @@
   <body>
     <main class="max-w-[100%]">
       <!-- section 1 -->
-      <section style="background-image: url('./assets/background 1.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-        <header class="flex flex-row items-center justify-between px-[2em] pt-[2em] sm:w-[80%] sm:mx-auto lg:pt-[0.2em]">
+      <section
+        style="
+          background-image: url('./assets/background 1.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        "
+      >
+        <header
+          class="flex flex-row items-center justify-between px-[2em] pt-[2em] sm:w-[80%] sm:mx-auto lg:pt-[0.2em]"
+        >
           <img src="./assets/Logo.png" alt="logo" />
-          
-          <nav class="underline sm:flex flex-row gap-[1em] text-white hidden lg:text-[0.8rem] lg:gap-[3em]">
+
+          <nav
+            class="underline flex flex-row gap-[1em] text-white lg:text-[0.8rem] lg:gap-[3em]"
+          >
             <a href="#history">01. HISTORY</a>
             <a href="">02. TEAM</a>
           </nav>
-          <button class="sm:hidden" id="menu-icon">
-            <img src="./assets/bars-solid.svg" alt="" width="30" class="text-white">
-          </button>
-          
         </header>
 
-        <h1 class="flex items-center justify-center pb-[5em] pt-[4em] text-[2.5rem] font-bold text-center lg:text-[4rem] lg:pt-[2em] lg:pb-[2.5em]">
+        <h1
+          class="flex items-center justify-center pb-[5em] pt-[4em] text-[2.5rem] font-bold text-center lg:text-[4rem] lg:pt-[2em] lg:pb-[2.5em]"
+        >
           LOSANGELES <br />
           MOUNTAINS
         </h1>
       </section>
 
-
-
       <!-- section 2 -->
-      <section style="background-image: url('./assets/Background 2.png'); background-size: cover; background-repeat: no-repeat; background-position: center;" id="history">
+      <section
+        style="
+          background-image: url('./assets/Background 2.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        "
+        id="history"
+      >
         <header class="hidden bg-white p-[1em] sm:flex">
-
-          <div class="flex flex-row items-center justify-between sm:w-[80%] sm:mx-auto">
+          <div
+            class="flex flex-row items-center justify-between sm:w-[80%] sm:mx-auto"
+          >
             <div class="flex flex-row gap-4">
               <img src="./assets/Logo.png" alt="logo" />
               <h3>
@@ -44,34 +60,171 @@
                 MOUNTAINS
               </h3>
             </div>
-            
-            <nav class="underline flex flex-row gap-[1em] text-[#1d1d5a] lg:text-[0.8rem] lg:gap-[3em]">
+
+            <nav
+              class="underline flex flex-row gap-[1em] text-[#1d1d5a] lg:text-[0.8rem] lg:gap-[3em]"
+            >
               <span>01. HISTORY</span>
               <span>02. TEAM</span>
             </nav>
-
           </div>
-          
         </header>
 
         <div class="pb-[23em] p-[2em]">
           <div class="sm:w-[70%] mx-auto">
-              <h1 class="text-[2rem] font-extrabold">
-                <span class="text-[2rem] font-extrabold text-[#D5D5D5] lg:text-[5rem]">01.</span>
-                <span class="text-[1rem]">HISTORY</span>
-              </h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore
-                ratione alias necessitatibus cupiditate temporibus veniam, harum
-                autem assumenda. Vero velit libero quia dolorum maiores.
-              </p>
+            <h1 class="text-[2rem] font-extrabold flex flex-row items-center">
+              <span class="text-[3rem] text-[#D5D5D5] sm:text-[5rem]">01.</span>
+              <span class="text-[1rem] sm:text-[1.5rem]">HISTORY</span>
+            </h1>
+            <p class="max-w-[55ch]">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore
+              ratione alias necessitatibus cupiditate temporibus veniam, harum
+              autem assumenda. Vero velit libero quia dolorum maiores.
+            </p>
           </div>
-          
         </div>
+      </section>
 
-        <!-- accordian -->
-        <footer class="flex items-center justify-center p-[1em] bg-slate-600 gap-[0.5em]">
-          <ul class="flex flex-row gap-2">
+      <!-- accordian -->
+      <section class="p-[1em] bg-slate-600 sm:hidden flex flex-col gap-2">
+        <button
+          class="bg-white border w-[100%] font-extrabold flex flex-row justify-end"
+          id="accBtn1"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </button>
+        <button
+          class="bg-white border w-[100%] font-extrabold hidden flex-row justify-end"
+          id="accBtn4"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <ul class="hidden flex-col items-center gap-2 py-2" id="accList1">
+          <li>
+            <img src="./assets/sample pic 1.png" alt="man on cliff" />
+          </li>
+          <li>
+            <img src="./assets/sample pic 2.png" alt="cloudy mountain" />
+          </li>
+        </ul>
+        <button
+          class="bg-white border w-[100%] font-extrabold flex flex-row justify-end"
+          id="accBtn2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </button>
+        <button
+          class="bg-white border w-[100%] font-extrabold hidden flex-row justify-end"
+          id="accBtn5"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <ul class="hidden flex-col items-center gap-2 py-2" id="accList2">
+          <li>
+            <img src="./assets/sample pic 1.png" alt="man on cliff" />
+          </li>
+          <li>
+            <img src="./assets/sample pic 2.png" alt="cloudy mountain" />
+          </li>
+        </ul>
+        <button
+          class="bg-white border w-[100%] font-extrabold flex flex-row justify-end"
+          id="accBtn3"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </button>
+        <button
+          class="bg-white border w-[100%] font-extrabold hidden flex-row justify-end"
+          id="accBtn6"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <ul class="hidden flex-col items-center gap-2 py-2" id="accList3">
+          <li>
+            <img src="./assets/sample pic 1.png" alt="man on cliff" />
+          </li>
+          <li>
+            <img src="./assets/sample pic 2.png" alt="cloudy mountain" />
+          </li>
+        </ul>
+      </section>
+
+      <!-- carousel -->
+      <section class="p-[1em] bg-slate-600 hidden sm:block">
+        <div id="carousel1" class="flex flex-col">
+          <ul class="flex flex-row items-center justify-center gap-2 py-2">
             <li>
               <img src="./assets/sample pic 1.png" alt="man on cliff" />
             </li>
@@ -85,34 +238,140 @@
               <img src="./assets/sample pic 2.png" alt="cloudy mountain" />
             </li>
           </ul>
-        </footer>
+          <div class="flex flex-row mx-auto items-center justify-center gap-1">
+            <div class="w-2 h-2 bg-white rounded-full"></div>
+            <div class="w-2 h-2 bg-slate-500 rounded-full"></div>
+            <div class="w-2 h-2 bg-slate-500 rounded-full"></div>
+          </div>
+        </div>
+
+        <div id="carousel2" class="hidden flex-col">
+          <ul class="flex flex-row items-center justify-around gap-2 py-2">
+            <li>
+              <img src="./assets/sample pic 1.png" alt="man on cliff" />
+            </li>
+            <li>
+              <img src="./assets/sample pic 1.png" alt="man on cliff" />
+            </li>
+            <li>
+              <img src="./assets/sample pic 2.png" alt="cloudy mountain" />
+            </li>
+            <li>
+              <img src="./assets/sample pic 2.png" alt="cloudy mountain" />
+            </li>
+          </ul>
+          <div class="flex flex-row mx-auto items-center justify-center gap-1">
+            <div class="w-2 h-2 bg-slate-500 rounded-full"></div>
+            <div class="w-2 h-2 bg-white rounded-full"></div>
+            <div class="w-2 h-2 bg-slate-500 rounded-full"></div>
+          </div>
+        </div>
+
+        <div id="carousel3" class="hidden flex-col">
+          <ul class="flex flex-row items-center justify-around gap-2 py-2">
+            <li>
+              <img src="./assets/sample pic 1.png" alt="man on cliff" />
+            </li>
+            <li>
+              <img src="./assets/sample pic 2.png" alt="cloudy mountain" />
+            </li>
+            <li>
+              <img src="./assets/sample pic 1.png" alt="man on cliff" />
+            </li>
+            <li>
+              <img src="./assets/sample pic 2.png" alt="cloudy mountain" />
+            </li>
+          </ul>
+          <div class="flex flex-row mx-auto items-center justify-center gap-1">
+            <div class="w-2 h-2 bg-slate-500 rounded-full"></div>
+            <div class="w-2 h-2 bg-slate-500 rounded-full"></div>
+            <div class="w-2 h-2 bg-white rounded-full"></div>
+          </div>
+        </div>
+        <div class="flex flex-row items-center justify-center pt-5 gap-4">
+          <button
+            class="border rounded-full flex flex-rowitems-center justify-center border-[black]"
+            id="left-btn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+          <button
+            class="border rounded-full flex flex-rowitems-center justify-center border-[black]"
+            id="right-btn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+        </div>
       </section>
 
-
       <!-- section 3 -->
-      <section style="background-image: url('./assets/background 3.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+      <section
+        style="
+          background-image: url('./assets/background 3.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        "
+      >
         <header class="bg-white">
-          <div class="flex flex-row items-center sm:justify-evenly bg-white p-[2em] w-[80%] mx-auto lg:p-[0.2em]">
-            <h1 class="font-extrabold">
-              <span class="text-[2rem] text-[#D5D5D5] lg:text-[5rem]">02.</span>
-              <span class="text-[1rem]">CLIMB</span>
+          <div
+            class="flex flex-row items-center sm:justify-evenly bg-white p-[1rem] lg:p-[0.2em]"
+          >
+            <h1 class="font-extrabold flex flex-row items-center">
+              <span class="text-[3rem] text-[#D5D5D5] sm:text-[5rem]">02.</span>
+              <span class="text-[1rem] sm:text-[1.5rem]">CLIMB</span>
             </h1>
 
-            <p class="hidden sm:block lg:w-[60%]">
+            <p class="hidden sm:block lg:w-[60%] max-w-[45ch]">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Repudiandae, aspernatur? Provident earum ad a optio doloribus.
             </p>
           </div>
 
           <nav
-            class="bg-blue-950 text-white flex flex-row items-center justify-evenly  py-[1em] lg:py-[0em] lg:justify-start lg:gap-[2em] lg:pl-[10em]"
+            class="bg-blue-950 text-white flex flex-row items-center justify-evenly lg:py-[0em] lg:justify-start lg:gap-[2em] lg:pl-[10em]"
           >
-          <a href=""><div class="bg-gray-500 text-[#1d1d6c] underline">MOUNTAIN 1</div></a><a href=""><div class="underline">MOUNTAIN 2</div></a>
+            <a href="">
+              <div class="bg-gray-500 text-[#1d1d6c] underline">MOUNTAIN 1</div>
+            </a>
+            <a href="">
+              <div class="underline">MOUNTAIN 2</div>
+            </a>
           </nav>
         </header>
-        <div class="py-[10em] flex items-center justify-center lg:block lg:py-0 lg:pt-[5em] lg:pl-[10em] lg:pb-[25em] leading-[3em]">
+        <div
+          class="py-[10em] flex items-center justify-center lg:block lg:py-0 lg:pt-[5em] lg:pl-[10em] lg:pb-[25em] leading-[3em]"
+        >
           <div class="bg-white border border-[black] w-[300px] p-[1em]">
-            <h2 class="text-[#1d1d5a] text-[1.2rem] font-extrabold">SCHEDULE</h2>
+            <h2 class="text-[#1d1d5a] text-[1.2rem] font-extrabold">
+              SCHEDULE
+            </h2>
             <div class="flex flex-row items-center justify-between">
               <h3>25 Nov 2016</h3>
               <h3>vestibulum vivera</h3>
@@ -135,17 +394,18 @@
     </main>
 
     <!-- footer -->
-    <footer class="flex flex-col bg-white items-center sm:justify-center py-[2em] gap-[1em] sm:flex-row lg:justify-around lg:py-[0.5em]">
+    <footer
+      class="flex flex-col bg-white items-center sm:justify-center py-[2em] gap-[1em] sm:flex-row lg:justify-around lg:py-[0.5em]"
+    >
       <div class="flex flex-row gap-[1em]">
         <img src="./assets/Logo.png" alt="logo" />
         <h3 class="hidden lg:block">
-          LOSANGELES <br/>
+          LOSANGELES <br />
           MOUNTAINS
         </h3>
-      </div>   
+      </div>
       <h3>COPYRIGHT 2016. ALL RIGHTS RESERVED</h3>
     </footer>
-
-  <script src="./index.js"></script>
   </body>
+  <script src="./index.js"></script>
 </html>
