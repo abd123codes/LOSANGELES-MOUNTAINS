@@ -55,37 +55,40 @@ const carousel1 = document.getElementById("carousel1");
 const carousel2 = document.getElementById("carousel2");
 const carousel3 = document.getElementById("carousel3");
 
-const nav1 = document.getElementById("nav1");
-const nav2 = document.getElementById("nav2");
-const nav3 = document.getElementById("nav3");
+const nav1 = document.querySelectorAll("#nav1");
+const nav2 = document.querySelectorAll("#nav2");
+const nav3 = document.querySelectorAll("#nav3");
 
-carousel1.style.display = "flex";
-carousel2.style.display = "none";
-carousel3.style.display = "none";
+function handler0() {
+  carousel1.style.display = "flex";
+  carousel2.style.display = "none";
+  carousel3.style.display = "none";
+}
+function handler1() {
+  carousel1.style.display = "none";
+  carousel2.style.display = "flex";
+  carousel3.style.display = "none";
+}
+function handler2() {
+  carousel1.style.display = "none";
+  carousel2.style.display = "none";
+  carousel3.style.display = "flex";
+}
 
-nav1.addEventListener("click", function navHandler1() {
-  if (carousel1.style.display === "flex") {
-    carousel1.style.display = "none";
-    carousel2.style.display = "flex";
-    carousel3.style.display = "none";
-  }
-});
-nav2.addEventListener("click", function navHandler2() {
-  if (carousel2.style.display === "flex") {
-    carousel1.style.display = "none";
-    carousel2.style.display = "none";
-    carousel3.style.display = "flex";
-  }
-});
-nav3.addEventListener("click", function navHandler3() {
-  if (carousel3.style.display === "flex") {
-    carousel1.style.display = "flex";
-    carousel2.style.display = "none";
-    carousel3.style.display = "none";
-  }
-});
+nav1[0].addEventListener("click", handler0);
+nav2[0].addEventListener("click", handler1);
+nav3[0].addEventListener("click", handler2);
 
-//  BETTER FOR UI, clear indication on what to click to navigate
+nav1[1].addEventListener("click", handler0);
+nav2[1].addEventListener("click", handler1);
+nav3[1].addEventListener("click", handler2);
+
+nav1[2].addEventListener("click", handler0);
+nav2[2].addEventListener("click", handler1);
+nav3[2].addEventListener("click", handler2);
+
+
+//  buttons on what to click to navigate
 // const leftBtn = document.getElementById("left-btn");
 // const rightBtn = document.getElementById("right-btn");
 
