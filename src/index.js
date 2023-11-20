@@ -1,54 +1,68 @@
-// ACCORDIAN
-const accDisplayButton1 = document.querySelector("#accBtn1");
-const accDisplayButton2 = document.querySelector("#accBtn2");
-const accDisplayButton3 = document.querySelector("#accBtn3");
-const accDisplayButton4 = document.querySelector("#accBtn4");
-const accDisplayButton5 = document.querySelector("#accBtn5");
-const accDisplayButton6 = document.querySelector("#accBtn6");
-const accList1 = document.querySelector("#accList1");
-const accList2 = document.querySelector("#accList2");
-const accList3 = document.querySelector("#accList3");
+//accordian elements
+const accordian = document.getElementById("accordian");
+const accordianInd = document.getElementById("acc-ind");
+const accbtn = document.querySelectorAll("#accbtn");
+accbtn[0].style.display = "none";
+accbtn[1].style.display = "none";
 
-function accHandler1() {
-  accList1.style.display = "flex";
-  accDisplayButton1.style.display = "none";
-  accDisplayButton4.style.display = "flex";
-}
+//accordian content  display handler
+accordian.addEventListener("click", function handler1() {
+  if (accordianInd.innerText === "+") {
+    accordianInd.innerText = "-";
+    accbtn[0].style.display = "block";
+    accbtn[1].style.display = "block";
+  } else if (accordianInd.innerText === "-") {
+    accordianInd.innerText = "+";
+    accbtn[0].style.display = "none";
+    accbtn[1].style.display = "none";
+    schedule1.style.display = "flex";
+    schedule2.style.display = "none";
+    mount1[0].style.backgroundColor = "#b0b4be";
+    mount1[0].style.color = "#414f6b";
+    mount1[1].style.backgroundColor = "rgb(23 37 84)";
+    mount1[1].style.color = "#b0b4be";
+  }
+});
 
-function accHandler4() {
-  accList1.style.display = "none";
-  accDisplayButton1.style.display = "flex";
-  accDisplayButton4.style.display = "none";
-}
-function accHandler2() {
-  accList2.style.display = "flex";
-  accDisplayButton2.style.display = "none";
-  accDisplayButton5.style.display = "flex";
-}
+//schedule navigation for accordian
+const mount1 = document.querySelectorAll("#mount1");
+const schedule1 = document.getElementById("schedule1");
+const schedule2 = document.getElementById("schedule2");
+mount1[0].addEventListener("click", function handler2() {
+  schedule1.style.display = "flex";
+  schedule2.style.display = "none";
+  mount1[0].style.backgroundColor = "#b0b4be";
+  mount1[0].style.color = "#414f6b";
+  mount1[1].style.backgroundColor = "rgb(23 37 84)";
+  mount1[1].style.color = "#b0b4be";
+});
 
-function accHandler5() {
-  accList2.style.display = "none";
-  accDisplayButton2.style.display = "flex";
-  accDisplayButton5.style.display = "none";
-}
-function accHandler3() {
-  accList3.style.display = "flex";
-  accDisplayButton3.style.display = "none";
-  accDisplayButton6.style.display = "flex";
-}
-
-function accHandler6() {
-  accList3.style.display = "none";
-  accDisplayButton3.style.display = "flex";
-  accDisplayButton6.style.display = "none";
-}
-
-accDisplayButton1.addEventListener("click", accHandler1);
-accDisplayButton2.addEventListener("click", accHandler2);
-accDisplayButton3.addEventListener("click", accHandler3);
-accDisplayButton4.addEventListener("click", accHandler4);
-accDisplayButton5.addEventListener("click", accHandler5);
-accDisplayButton6.addEventListener("click", accHandler6);
+mount1[1].addEventListener("click", function handler2() {
+  schedule1.style.display = "none";
+  schedule2.style.display = "flex";
+  mount1[1].style.backgroundColor = "#b0b4be";
+  mount1[1].style.color = "#414f6b";
+  mount1[0].style.backgroundColor = "rgb(23 37 84)";
+  mount1[0].style.color = "#b0b4be";
+});
+//schedule navigation on desktop
+const mount2 = document.querySelectorAll("#mount2");
+mount2[0].addEventListener("click", function handler3() {
+  schedule1.style.display = "flex";
+  schedule2.style.display = "none";
+  mount2[0].style.color = "rgb(23 37 84)";
+  mount2[0].style.backgroundColor = "#b0b4be";
+  mount2[1].style.color = "#b0b4be";
+  mount2[1].style.backgroundColor = "rgb(23 37 84)";
+});
+mount2[1].addEventListener("click", function handler3() {
+  schedule1.style.display = "none";
+  schedule2.style.display = "flex";
+  mount2[1].style.color = "rgb(23 37 84)";
+  mount2[1].style.backgroundColor = "#b0b4be";
+  mount2[0].style.color = "#b0b4be";
+  mount2[0].style.backgroundColor = "rgb(23 37 84)";
+});
 
 //CAROUSEL
 const carousel1 = document.getElementById("carousel1");
@@ -87,8 +101,6 @@ nav1[2].addEventListener("click", handler0);
 nav2[2].addEventListener("click", handler1);
 nav3[2].addEventListener("click", handler2);
 
-
-//  buttons on what to click to navigate
 // const leftBtn = document.getElementById("left-btn");
 // const rightBtn = document.getElementById("right-btn");
 
